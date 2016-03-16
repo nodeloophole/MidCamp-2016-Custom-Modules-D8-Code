@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.press_release.body
+        - field.field.node.press_release.field_counter
+        - node.type.press_release
+    module:
+        - text
+        - user
+id: node.press_release.default
+targetEntityType: node
+bundle: press_release
+mode: default
+content:
+    body:
+        label: hidden
+        type: text_default
+        weight: 2
+        settings: {  }
+        third_party_settings: {  }
+    field_counter:
+        weight: 1
+        label: above
+        settings:
+            thousand_separator: ''
+            prefix_suffix: true
+        third_party_settings: {  }
+        type: number_integer
+    links:
+        weight: 0
+        settings: {  }
+        third_party_settings: {  }
+hidden: {  }

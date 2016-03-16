@@ -1,0 +1,10 @@
+services:
+  mc.route_subscriber:
+    class: Drupal\mc\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  mc.create.pressrelease:
+    class: Drupal\mc\CreatePressReleaseService
+    arguments: []
+

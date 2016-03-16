@@ -1,0 +1,8 @@
+mc.press_releases:
+  # Menu link title
+  title: 'Latest Press'
+  # Route to use
+  route_name: view.latest_press_releases.page_1
+  # Menu in which to place the link
+  menu_name: main
+

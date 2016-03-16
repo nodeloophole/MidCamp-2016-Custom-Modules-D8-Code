@@ -1,0 +1,122 @@
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/table, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\TableController")
+# and a method ("generateTable").
+mc.table_controller_generateTable:
+  path: 'mc/table'
+  defaults:
+    _controller: '\Drupal\mc\Controller\TableController::generateTable'
+    _title: 'Table'
+  requirements:
+    _permission: 'access content'
+
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/link, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\LinkController")
+# and a method ("generateLinks").
+mc.link_controller_generateLinks:
+  path: 'mc/link'
+  defaults:
+    _controller: '\Drupal\mc\Controller\LinkController::generateLinks'
+    _title: 'Link Examples'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/lists, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\ListController")
+# and a method ("generateLists").
+mc.list_controller_generateLists:
+  path: 'mc/lists'
+  defaults:
+    _controller: '\Drupal\mc\Controller\ListController::generateLists'
+    _title: 'Lists'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/counter/{node}, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\UpdateCountController")
+# and a method ("updateCounter").
+mc.update_count_controller_updateCounter:
+  path: 'mc/counter/{nid}'
+  defaults:
+    _controller: '\Drupal\mc\Controller\UpdateCountController::updateCounter'
+    _title: 'Updating Counter on Node'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/count3, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\QueryNodesController")
+# and a method ("count3").
+mc.query_nodes_controller_count3:
+  path: 'mc/count3'
+  defaults:
+    _controller: '\Drupal\mc\Controller\QueryNodesController::count3'
+    _title: 'Articles with more than 3 counter value'
+  requirements:
+    _permission: 'access content'
+
+
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/create-press/{count}, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\CreatePressController")
+# and a method ("create").
+mc.create_press_controller_create:
+  path: 'mc/create-press/{count}'
+  defaults:
+    _controller: '\Drupal\mc\Controller\CreatePressController::createPressReleases'
+    _title: 'Create Press Releases'
+  requirements:
+    _permission: 'access content'
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines with what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev/mc/view-result-nids, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\mc\Controller\ViewResultController")
+# and a method ("latestPressReleases").
+mc.get_node_ids_of_view_result:
+  path: 'mc/view-result-nids'
+  defaults:
+    _controller: '\Drupal\mc\Controller\ViewResultController::latestPressReleases'
+    _title: 'Node IDs of Latest Press Releases'
+  requirements:
+    _permission: 'access content'
