@@ -39,7 +39,7 @@ class UpdateCountController extends ControllerBase {
     // Output info about the node being updated.
     $content[] = [
       '#type' => 'markup',
-      '#markup' => $this->t("Updating node with title: :title", array(':title' => $title)),
+      '#markup' => $this->t("Updating node with title: :title", [':title' => $title]),
       '#prefix' => '<div><h2>',
       '#suffix' => '</h2></div>',
     ];

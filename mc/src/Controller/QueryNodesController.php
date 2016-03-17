@@ -37,7 +37,7 @@ class QueryNodesController extends ControllerBase {
     $nodes = \Drupal\node\Entity\Node::loadMultiple(array_keys($result));
 
     // Create an item list with the node(s) from the query result
-    $items = array();
+    $items = [];
     foreach ($nodes as $node) {
       // Get the $nid
       $nidData = $node->get('nid')->getValue();

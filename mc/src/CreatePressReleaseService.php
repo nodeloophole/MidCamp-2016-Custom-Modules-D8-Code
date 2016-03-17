@@ -26,7 +26,7 @@ class CreatePressReleaseService implements CreatePressReleaseServiceInterface {
     // Iterate the count of the {count} parameter from the route.
     for ($i = 1; $i <= $nodeCount; $i++) {
       // Create an array for the node
-      $node_fields = array(
+      $node_fields = [
         'title' => t('Press Release :i of :nodeCount', [
           ':i' => $i,
           ':nodeCount' => $nodeCount
@@ -36,7 +36,7 @@ class CreatePressReleaseService implements CreatePressReleaseServiceInterface {
         'type' => 'press_release',
         'promote' => 1,
         'langcode' => 'en',
-      );
+      ];
       // Create a node object from the array.
       $node = $this->NodeStorage->create($node_fields);
       // Save the node.

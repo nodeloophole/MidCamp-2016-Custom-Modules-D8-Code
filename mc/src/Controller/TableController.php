@@ -23,40 +23,40 @@ class TableController extends ControllerBase {
    */
   public function generateTable() {
     // Header
-    $header = array(
-      array('data' => t('Item')),
-      array('data' => t('Classification')),
-    );
+    $header = [
+     ['data' => t('Item')],
+     ['data' => t('Classification')],
+    ];
 
     // Rows
-    $rows = array();
+    $rows = [];
 
-    $rows[] = array(
+    $rows[] = [
       t('Apple'),
       t('Fruit'),
-    );
+    ];
 
-    $rows[] = array(
+    $rows[] = [
       t('Eggplant'),
       t('Vegetable'),
-    );
+    ];
 
-    $rows[] = array(
+    $rows[] = [
       t('Pear'),
       t('Fruit'),
-    );
+    ];
 
-    $rows[] = array(
+    $rows[] = [
       t('Mushroom'),
       t('Fungus'),
-    );
+    ];
 
     // Create the table as a render array.
-    $content[] = array(
+    $content[] = [
       '#theme' => 'table',
       '#header' => $header,
       '#rows' => $rows,
-    );
+    ];
 
     return $content;
   }

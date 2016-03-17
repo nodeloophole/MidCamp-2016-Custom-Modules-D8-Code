@@ -33,6 +33,7 @@ class RouteSubscriber extends RouteSubscriberBase {
     if ($route = $collection->get('system.themes_page')) {
       // Change the title for the Appearance page.
       $route->setDefault('_title', 'The Look');
+      $route->setPath('/admin/gary');
     }
   }
 }

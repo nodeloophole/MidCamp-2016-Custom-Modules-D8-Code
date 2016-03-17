@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - mc
+  theme:
+    - bartik
+id: linksblock
+theme: bartik
+region: sidebar_first
+weight: null
+provider: null
+plugin: links_block
+settings:
+  id: links_block
+  label: 'Links block'
+  provider: mc
+  label_display: visible
+visibility: {  }

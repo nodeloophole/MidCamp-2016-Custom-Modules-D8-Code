@@ -72,11 +72,11 @@ class LinkController extends ControllerBase {
     ];
     // Create link from Route. Pass array for query and fragment.
     // link will be absolute: "http://[site url]/?foo=1#jump_to"
-    $link = Link::createFromRoute("Home Again", '<front>', array(), array(
+    $link = Link::createFromRoute("Home Again", '<front>', [], [
       'query' => array('foo' => 1),
       'fragment' => 'jump_to',
       'absolute' => TRUE
-    ))
+    ])
       ->toString();
     $content[] = [
       '#type' => 'markup',
@@ -91,14 +91,14 @@ class LinkController extends ControllerBase {
     ];
     // Creating a link from text and URL. forcing the link to HTTPS. Then turn
     // the link into a render array.
-    $link = Link::fromTextAndUrl('Howdy', url::fromUri('http://www.yahoo.com', array(
+    $link = Link::fromTextAndUrl('Howdy', url::fromUri('http://www.yahoo.com', [
       'https' => TRUE
-    )))->toRenderable();
+    ]))->toRenderable();
 
     // Adding class attributes to the render array
-    $link['#attributes'] = array(
-      'class' => array('foo', 'button'),
-    );
+    $link['#attributes'] = [
+      'class' => ['foo', 'button'],
+    ];
 
     $content[] = $link;
 
